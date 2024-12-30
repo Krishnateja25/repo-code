@@ -1,0 +1,13 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - '**/*'  # To trigger on any branch, but the condition will restrict execution
+
+jobs:
+  call-reusable-workflow:
+    uses: Krishnateja25/repo-workflows/.github/workflows/reusable-workflow.yml@main
+    with:
+      branch: ${{ github.ref }}

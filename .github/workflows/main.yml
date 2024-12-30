@@ -3,7 +3,7 @@ name: Main Workflow
 on:
   push:
     branches:
-      -default 
+      -main
       - '**/*'  # To trigger on any branch, but the condition will restrict execution
 
 jobs:
